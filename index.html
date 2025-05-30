@@ -1,72 +1,126 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AngelBolos</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <nav class="nav">
-        <ul class="menu">
-          <li><a href="maispedidos.html">Mais pedidos</a></li>
-          <li class="dropdown">
-            <a href="">Categorias <span>&#9660;</span></a>
-            <ul class="dropdown-content">
-              <li><a href="casamento.html">Casamento</a></li>
-              <li><a href="15anos.html  ">Aniversarios 15 anos</a></li>
-            </ul>
-          </li>
-          <li class="logo-item">
-            <a href="#">
-              <img
-                src="assets/images/Rectangle 9.png"
-                alt="Logo da AngelBolos"
-                class="logo"
-              />
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngelBolos - Bolos Cenográficos</title>
+  <meta
+    name="description"
+    content="Especialistas em bolos cenográficos para casamentos e festas de 15 anos em Maringá."
+  />
+  <like rel="stylesheet" href="styles.css"/>
+  <like
+    href="https://fonts.googleapis.com/css2?family=Forum:wght@400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav">
+      <div class="nav-container">
+        <div class="nav-menu" id="nav-menu">
+          <a href="maispedidos.html" class="nav-link">Mais Pedidos</a>
+          <div class="dropdow">
+            <a href="#" class="nav-link dropdow-toggle">
+              Categoria
+              <span class="dropdow-toggle">▼</span>
             </a>
-          </li>
-          <li><a href="sobre.html">Quem somos?</a></li>
-          <li><a href="depoimentos.html">Depoimentos</a></li>
-        </ul>
-      </nav>
-    </header>
+            <div class="dropdow-toggle">
+              <a href="casamento.html">Casamentos</a>
+              <a href="15anos.html">Aniversário de 15 anos</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="logo-container">
+          <a href="index.html">
+            <img
+            src="assets/images/Rectangle 9.png"
+            alt="AngelBolos - Logo"
+            class="logo"
+            />
+          </a>
+        </div>
 
-    <section class="banner">
-      <span class="banner-text">Encontre seu bolo de Casamento aqui</span>
+        <div class="nav-menu">
+          <a href="sobre.html" class="nav-link">Quem Somos?</a>
+          <a href="depoimentos.html" class="nav-link">Depoimentos</a>
+        </div>
+
+        <button clss="mobile-menu-toggle" id="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section clas="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Encontre seu bolo de casamento dos sonhos</h1>
+        <a href="#mais-pedidos" class="cta-button">Ver Nossos Bolos</a>
+      </div>
+      <div class="hero-decoratin"></div>
     </section>
 
-    <main>
-      <section class="mais-pedidos">
-        <h2>Os Mais Pedidos</h2>
-        <div class="bolos-galeria">
-          <img src="bolo1.jpg" alt="Bolo 1" />
-          <img src="bolo2.jpg" alt="Bolo 2" />
-          <img src="bolo3.jpg" alt="Bolo 3" />
-          <img src="bolo4.jpg" alt="Bolo 4" />
+    <section class="mais-pedidos" id="mais-pedidos">
+      <div class="container">
+        <h2 class="section-title">Os Mais Pedidos</h2>
+        <p class="section-title">
+          Conheça os modelos que mais encantam nossos clientes
+        </p>
+
+        <div class="bolos-galeria" id="bolos-galeria">
+        <div class="bolo-card" data-category="casamento">
+          <div class="bolo-image">
+            <img
+            src="assets/images/WhatsApp Image 2025-05-20 at 19.49.53 (1).jpeg"
+            alt="bolo de casamento elegante com flores"
+            loading="lazy"
+            />
+            <div class="bolo_overlay">
+              <button class="view-details" onclick="openModal('bolo1')">
+                Ver Detalhes
+              </button>
+            </div>
+          </div>
+          <h3 class="bolo-title">Elegância Clássica</h3>
+          <p class="bolo-description">
+            Perfeito para casamentos tradicionais
+          </p>
         </div>
-      </section>
-    </main>
 
-    <div class="whatsapp-icon">
-      <a
-        href="https://wa.me/5544991431604"
-        target="_blank"
-        id="whatsappLink"
-        onclick="confirmWhatsApp(event)"
-      >
-        <img src="assets/images/whatsapp-icon.png" alt="WhatsApp" />
-      </a>
-    </div>
+        <div class="bolo-card" data-category="casamento">
+          <div class="bolo-image">
+            <img
+              src="assets/images/WhatsApp Image 2025-05-20 at 19.49.53 (2).jpeg"
+              alt="Bolo para festa de 15 anos"
+              loading="lazy"
+              />
+              <div class="bolo-overlay">
+                <button class="view-details" onclick="openModal('bolo2')">
+                  Ver Detalhes
+                </button>
+              </div>
+          </div>
+          <h3 class="bolo-title">Estilo Moderno</h3>
+          <p class="bolo-description">Design contemporâneo e sofisticado</p>
+        </div>
 
-    <!-- Botão de rolagem para o topo -->
-    <button id="scrollToTop" class="scroll-to-top">↑</button>
+        <div class="bolo-card" data-category="15anos">
+          <div class="bolo-image">
+            <img
+              src="assets/images/WhatsApp Image 2025-05-20 at 19.49.53 (4).jpeg"
+              alt="Bolo de casamento simples"
+              loading="lazy"
+            />
 
-    <script src="script.js"></script>
-  </body>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
 </html>
