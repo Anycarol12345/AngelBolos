@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Forum', cursive;
+  font-family: "Forum", cursive;
   background-color: #fff;
 }
 
@@ -26,6 +26,11 @@ body {
   padding: 0 60px;
   position: relative;
   height: 140px;
+}
+
+/* Remover as bolinhas dos itens do menu principal */
+.menu {
+  list-style: none;
 }
 
 .menu > li {
@@ -51,7 +56,7 @@ body {
   border-radius: 50%;
   background: #b4e2c2;
   margin-top: -30px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 .menu a {
@@ -66,29 +71,37 @@ body {
   color: #3e5f4c;
 }
 
+/* Estilo para o menu dropdown */
+.dropdown {
+  position: relative;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #d9d9d9;
-  padding: 18px 25px 10px 25px;
-  border-radius: 25px;
-  min-width: 220px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  z-index: 10;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-.dropdown-content li {
-  margin-bottom: 10px;
-  text-align: left;
+/* Remover as bolinhas dos itens do submenu (dropdown) */
+.dropdown-content {
+  list-style: none;
 }
 
-.dropdown-content li:last-child {
-  margin-bottom: 0;
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Exibir o submenu ao passar o mouse */
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -105,7 +118,7 @@ body {
 
 .banner-text {
   font-size: 38px;
-  font-family: 'Forum', cursive;
+  font-family: "Forum", cursive;
   text-align: center;
   width: 100%;
   color: #fff;
@@ -158,7 +171,7 @@ body {
   height: 320px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   background: #fff;
 }
 
@@ -170,7 +183,7 @@ body {
 
 .about-title {
   font-size: 48px;
-  font-family: 'Forum', cursive;
+  font-family: "Forum", cursive;
   text-align: center;
   margin-bottom: 40px;
   color: #111;
@@ -184,4 +197,108 @@ body {
   text-align: left;
   margin: 0 auto;
   max-width: 900px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #c8e6c9;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+main {
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #c8e6c9;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #25d366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-icon img {
+  width: 30px;
+  height: 30px;
 }

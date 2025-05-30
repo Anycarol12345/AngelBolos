@@ -1,51 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AngelBolos</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="header">
-    <nav class="nav">
-      <ul class="menu">
-        <li><a href="maispedidos.html">Mais pedidos</a></li>
-        <li class="dropdown">
-          <a href="categoria.html">Categorias <span>&#9660;</span></a>
-          <ul class="dropdown-content">
-            <li><a href="#">Casamento</a></li>
-            <li><a href="#">Aniversarios 15 anos</a></li>
-          </ul>
-        </li>
-        <li class="logo-item">
-          <a href="#">
-            <img src="assets/images/Rectangle 9.png" alt="Logo da AngelBolos" class="logo">
-          </a>
-        </li>
-        <li><a href="sobre.html">Quem somos?</a></li>
-        <li><a href="depoimentos.html">Depoimentos</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AngelBolos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="maispedidos.html">Mais pedidos</a></li>
+          <li class="dropdown">
+            <a href="">Categorias <span>&#9660;</span></a>
+            <ul class="dropdown-content">
+              <li><a href="casamento.html">Casamento</a></li>
+              <li><a href="15anos.html  ">Aniversarios 15 anos</a></li>
+            </ul>
+          </li>
+          <li class="logo-item">
+            <a href="#">
+              <img
+                src="assets/images/Rectangle 9.png"
+                alt="Logo da AngelBolos"
+                class="logo"
+              />
+            </a>
+          </li>
+          <li><a href="sobre.html">Quem somos?</a></li>
+          <li><a href="depoimentos.html">Depoimentos</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <section class="banner">
-    <button class="arrow left">&#8592;</button>
-    <span class="banner-text">Encontre seu bolo de Casamento aqui</span>
-    <button class="arrow right">&#8594;</button>
-  </section>
-
-  <main>
-    <section class="mais-pedidos">
-      <h2>Os Mais Pedidos</h2>
-      <div class="bolos-galeria">
-        <img src="bolo1.jpg" alt="Bolo 1">
-        <img src="bolo2.jpg" alt="Bolo 2">
-        <img src="bolo3.jpg" alt="Bolo 3">
-        <img src="bolo4.jpg" alt="Bolo 4">
-      </div>
+    <section class="banner">
+      <span class="banner-text">Encontre seu bolo de Casamento aqui</span>
     </section>
-  </main>
-</body>
+
+    <main>
+      <section class="mais-pedidos">
+        <h2>Os Mais Pedidos</h2>
+        <div class="bolos-galeria">
+          <img src="bolo1.jpg" alt="Bolo 1" />
+          <img src="bolo2.jpg" alt="Bolo 2" />
+          <img src="bolo3.jpg" alt="Bolo 3" />
+          <img src="bolo4.jpg" alt="Bolo 4" />
+        </div>
+      </section>
+    </main>
+
+    <div class="whatsapp-icon">
+      <a
+        href="https://wa.me/5544991431604"
+        target="_blank"
+        id="whatsappLink"
+        onclick="confirmWhatsApp(event)"
+      >
+        <img src="assets/images/whatsapp-icon.png" alt="WhatsApp" />
+      </a>
+    </div>
+
+    <!-- Botão de rolagem para o topo -->
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
 </html>
