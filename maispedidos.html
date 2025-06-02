@@ -3,59 +3,410 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Os Mais Pedidos</title>
+    <title>Os Mais Pedidos - AngelBolos</title>
+    <meta
+      name="description"
+      content="Confira os bolos cenográficos mais solicitados da AngelBolos. Designs únicos para casamentos e festas de 15 anos."
+    />
     <link rel="stylesheet" href="styles.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Forum:wght@400&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <nav class="nav">
-        <ul class="menu">
-          <li><a href="maispedidos.html">Mais pedidos</a></li>
-          <li class="dropdown">
-            <a href="">Categorias <span>&#9660;</span></a>
-            <ul class="dropdown-content">
-              <li><a href="casamento.html">Casamento</a></li>
-              <li><a href="#">Aniversários 15 anos</a></li>
-            </ul>
-          </li>
-          <li class="logo-item">
+        <div class="nav-container">
+          <div class="nav-menu" id="nav-menu">
+            <a href="maispedidos.html" class="nav-link active">Mais Pedidos</a>
+            <div class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle">
+                Categorias
+                <span class="dropdown-arrow">▼</span>
+              </a>
+              <div class="dropdown-content">
+                <a href="casamento.html">Casamentos</a>
+                <a href="15anos.html">Aniversários 15 Anos</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="logo-container">
             <a href="index.html">
               <img
                 src="assets/images/Rectangle 9.png"
-                alt="Logo da AngelBolos"
+                alt="AngelBolos - Logo"
                 class="logo"
               />
             </a>
-          </li>
-          <li><a href="sobre.html">Quem somos?</a></li>
-          <li><a href="depoimentos.html">Depoimentos</a></li>
-        </ul>
+          </div>
+
+          <div class="nav-menu">
+            <a href="sobre.html" class="nav-link">Quem Somos</a>
+            <a href="depoimentos.html" class="nav-link">Depoimentos</a>
+          </div>
+
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </nav>
     </header>
 
-    <main>
-      <section class="mais-pedidos">
-        <h2>Os Mais Pedidos</h2>
-        <div class="bolos-galeria">
-          <img src="bolo1.jpg" alt="Bolo 1" />
-          <img src="bolo2.jpg" alt="Bolo 2" />
-          <img src="bolo3.jpg" alt="Bolo 3" />
-          <img src="bolo4.jpg" alt="Bolo 4" />
+    <main class="mais-pedidos-main">
+      <section class="mais-pedidos-hero">
+        <div class="container">
+          <h1 class="mais-pedidos-title">Os Mais Pedidos</h1>
+          <p class="mais-pedidos-subtitle">
+            Descubra os bolos cenográficos que mais encantam nossos clientes e
+            inspire-se para seu evento especial
+          </p>
+        </div>
+      </section>
+
+      <section class="mais-pedidos-intro">
+        <div class="container">
+          <div class="intro-content">
+            <h2>Por que estes são os favoritos?</h2>
+            <p>
+              Nossa seleção dos mais pedidos representa o que há de melhor em
+              design, qualidade e satisfação do cliente. Cada bolo desta coleção
+              foi cuidadosamente escolhido baseado no feedback positivo e na
+              frequência de solicitações.
+            </p>
+            <p>
+              Estes designs se destacam pela versatilidade, elegância e
+              capacidade de se adaptar a diferentes estilos de decoração,
+              tornando-se escolhas perfeitas para qualquer celebração especial.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="filtros-section">
+        <div class="container">
+          <div class="filtros-container">
+            <h3>Filtrar por:</h3>
+            <div class="filtros-grid">
+              <div class="filtro-group">
+                <label>Categoria:</label>
+                <div class="filter-buttons">
+                  <button class="filter-btn active" data-filter="all">
+                    Todos
+                  </button>
+                  <button class="filter-btn" data-filter="casamento">
+                    Casamentos
+                  </button>
+                  <button class="filter-btn" data-filter="15anos">
+                    15 Anos
+                  </button>
+                </div>
+              </div>
+              <div class="filtro-group">
+                <label>Estilo:</label>
+                <div class="filter-buttons">
+                  <button class="style-btn active" data-style="all">
+                    Todos
+                  </button>
+                  <button class="style-btn" data-style="classico">
+                    Clássico
+                  </button>
+                  <button class="style-btn" data-style="moderno">
+                    Moderno
+                  </button>
+                  <button class="style-btn" data-style="romantico">
+                    Romântico
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="produtos-section">
+        <div class="container">
+          <div class="produtos-grid" id="produtos-grid">
+            <div
+              class="produto-card"
+              data-category="casamento"
+              data-style="classico"
+              data-popularity="5"
+            >
+              <div class="produto-badge">
+                <span class="badge-text">Mais Pedido</span>
+              </div>
+              <div class="produto-image">
+                <img
+                  src="assets/images/WhatsApp Image 2025-05-20 at 19.49.53 (1).jpeg"
+                  alt="Bolo de casamento elegante com flores"
+                  loading="lazy"
+                />
+                <div class="produto-overlay">
+                  <button class="view-details" onclick="openModal('produto1')">
+                    Ver Detalhes
+                  </button>
+                  <button
+                    class="quick-quote"
+                    onclick="quickQuote('Elegância Clássica')"
+                  >
+                    Orçamento Rápido
+                  </button>
+                </div>
+              </div>
+              <div class="produto-info">
+                <h3 class="produto-title">Elegância Clássica</h3>
+                <p class="produto-category">Casamento • Clássico</p>
+                <p class="produto-description">
+                  Design atemporal com flores delicadas e acabamento premium
+                </p>
+                <div class="produto-stats">
+                  <div class="stat">
+                    <span class="stat-icon">❤️</span>
+                    <span class="stat-text">150+ pedidos</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-icon">⭐</span>
+                    <span class="stat-text">4.9/5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="produto-card"
+              data-category="casamento"
+              data-style="moderno"
+              data-popularity="4"
+            >
+              <div class="produto-badge">
+                <span class="badge-text">Top 3</span>
+              </div>
+              <div class="produto-image">
+                <img
+                  src="assets/images/WhatsApp Image 2025-05-20 at 19.49.53 (2).jpeg"
+                  alt="Bolo de casamento moderno"
+                  loading="lazy"
+                />
+                <div class="produto-overlay">
+                  <button class="view-details" onclick="openModal('produto2')">
+                    Ver Detalhes
+                  </button>
+                  <button
+                    class="quick-quote"
+                    onclick="quickQuote('Estilo Moderno')"
+                  >
+                    Orçamento Rápido
+                  </button>
+                </div>
+              </div>
+              <div class="produto-info">
+                <h3 class="produto-title">Estilo Moderno</h3>
+                <p class="produto-category">Casamento • Moderno</p>
+                <p class="produto-description">
+                  Linhas limpas e design contemporâneo para casais modernos
+                </p>
+                <div class="produto-stats">
+                  <div class="stat">
+                    <span class="stat-icon">❤️</span>
+                    <span class="stat-text">120+ pedidos</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-icon">⭐</span>
+                    <span class="stat-text">4.8/5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="produto-card"
+              data-category="casamento"
+              data-style="romantico"
+              data-popularity="4"
+            >
+              <div class="produto-badge">
+                <span class="badge-text">Top 5</span>
+              </div>
+              <div class="produto-image">
+                <img
+                  src="assets/images/WhatsApp Image 2025-05-20 at 19.49.53 (4).jpeg"
+                  alt="Bolo de casamento romântico"
+                  loading="lazy"
+                />
+                <div class="produto-overlay">
+                  <button class="view-details" onclick="openModal('produto4')">
+                    Ver Detalhes
+                  </button>
+                  <button
+                    class="quick-quote"
+                    onclick="quickQuote('Romance Floral')"
+                  >
+                    Orçamento Rápido
+                  </button>
+                </div>
+              </div>
+              <div class="produto-info">
+                <h3 class="produto-title">Romance Floral</h3>
+                <p class="produto-category">Casamento • Romântico</p>
+                <p class="produto-description">
+                  Delicadeza em cada detalhe com flores artesanais
+                </p>
+                <div class="produto-stats">
+                  <div class="stat">
+                    <span class="stat-icon">❤️</span>
+                    <span class="stat-text">110+ pedidos</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-icon">⭐</span>
+                    <span class="stat-text">4.9/5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="produto-card"
+              data-category="15anos"
+              data-style="moderno"
+              data-popularity="3"
+            >
+              <div class="produto-image">
+                <img
+                  src="assets/images/WhatsApp Image 2025-05-20 at 19.49.53 (8).jpeg"
+                  alt="Bolo moderno para 15 anos"
+                  loading="lazy"
+                />
+                <div class="produto-overlay">
+                  <button class="view-details" onclick="openModal('produto6')">
+                    Ver Detalhes
+                  </button>
+                  <button
+                    class="quick-quote"
+                    onclick="quickQuote('Juventude Moderna')"
+                  >
+                    Orçamento Rápido
+                  </button>
+                </div>
+              </div>
+              <div class="produto-info">
+                <h3 class="produto-title">Juventude Moderna</h3>
+                <p class="produto-category">15 Anos • Moderno</p>
+                <p class="produto-description">
+                  Design jovem e contemporâneo para debutantes modernas
+                </p>
+                <div class="produto-stats">
+                  <div class="stat">
+                    <span class="stat-icon">❤️</span>
+                    <span class="stat-text">70+ pedidos</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-icon">⭐</span>
+                    <span class="stat-text">4.8/5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ordenacao-container">
+            <label for="ordenacao">Ordenar por:</label>
+            <select id="ordenacao" onchange="sortProducts(this.value)">
+              <option value="popularity">Mais Pedidos</option>
+              <option value="rating">Melhor Avaliação</option>
+              <option value="name">Nome A-Z</option>
+              <option value="category">Categoria</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="mais-pedidos-cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Não encontrou o que procura?</h2>
+            <p>
+              Criamos bolos cenográficos personalizados para atender exatamente
+              ao que você sonha. Entre em contato e vamos criar algo único para
+              você!
+            </p>
+            <div class="cta-buttons">
+              <a
+                href="https://wa.me/5544991431604?text=Olá! Gostaria de solicitar um bolo personalizado."
+                target="_blank"
+                class="cta-button primary"
+                onclick="trackWhatsAppClick('mais-pedidos-custom')"
+              >
+                Bolo Personalizado
+              </a>
+              <a href="casamento.html" class="cta-button secondary">
+                Ver Todos os Casamentos
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Angel Bolos. Todos os direitos reservados.</p>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AngelBolos</h3>
+            <p>
+              Transformando momentos especiais em lembranças inesquecíveis desde
+              2020.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="casamento.html">Casamentos</a></li>
+              <li><a href="depoimentos.html">Depoimentos</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <p>📍 Maringá - PR</p>
+            <p>📱 (44) 99143-1604</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 AngelBolos. Todos os direitos reservados.</p>
+        </div>
+      </div>
     </footer>
 
-    <div class="whatsapp-icon">
-      <img src="whatsapp-icon.png" alt="WhatsApp" />
+    <!-- Modal para detalhes dos produtos -->
+    <div class="modal" id="bolo-modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div class="modal-body" id="modal-body">
+          <!-- Conteúdo será inserido dinamicamente -->
+        </div>
+      </div>
     </div>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-float">
+      <a
+        href="https://wa.me/5544991431604?text=Olá! Gostaria de saber mais sobre os bolos mais pedidos da AngelBolos."
+        target="_blank"
+        class="whatsapp-button"
+        onclick="trackWhatsAppClick('float-mais-pedidos')"
+      >
+        <img src="assets/images/10000484.png" alt="Falar no WhatsApp" />
+        <span class="whatsapp-tooltip">Fale conosco!</span>
+      </a>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+      ↑
+    </button>
 
     <script src="script.js"></script>
   </body>

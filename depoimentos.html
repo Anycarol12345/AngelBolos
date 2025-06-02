@@ -3,79 +3,235 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Depoimentos</title>
+    <title>Depoimentos - AngelBolos</title>
+    <meta
+      name="description"
+      content="Veja o que nossos clientes falam sobre os bolos cenográficos da AngelBolos. Depoimentos reais de casamentos e festas de 15 anos."
+    />
     <link rel="stylesheet" href="styles.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Forum:wght@400&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <nav class="nav">
-        <ul class="menu">
-          <li><a href="maispedidos.html">Mais pedidos</a></li>
-          <li class="dropdown">
-            <a href="categoria.html">Categorias <span>&#9660;</span></a>
-            <ul class="dropdown-content">
-              <li><a href="#">Casamento</a></li>
-              <li><a href="#">Aniversarios 15 anos</a></li>
-            </ul>
-          </li>
-          <li class="logo-item">
+        <div class="nav-container">
+          <div class="nav-menu" id="nav-menu">
+            <a href="maispedidos.html" class="nav-link">Mais Pedidos</a>
+            <div class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle">
+                Categorias
+                <span class="dropdown-arrow">▼</span>
+              </a>
+              <div class="dropdown-content">
+                <a href="casamento.html">Casamentos</a>
+                <a href="15anos.html">Aniversários 15 Anos</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="logo-container">
             <a href="index.html">
               <img
                 src="assets/images/Rectangle 9.png"
-                alt="Logo da AngelBolos"
+                alt="AngelBolos - Logo"
                 class="logo"
               />
             </a>
-          </li>
-          <li><a href="sobre.html">Quem somos?</a></li>
-          <li><a href="depoimentos.html">Depoimentos</a></li>
-        </ul>
+          </div>
+
+          <div class="nav-menu">
+            <a href="sobre.html" class="nav-link">Quem Somos</a>
+            <a href="depoimentos.html" class="nav-link active">Depoimentos</a>
+          </div>
+
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </nav>
     </header>
 
-    <main>
-      <section class="depoimentos">
-        <h2>Depoimentos</h2>
-        <div class="depoimentos-container">
-          <div class="depoimento">
-            <img src="cliente1.jpg" alt="Clara & Felipe" class="foto-cliente" />
-            <p class="nome-cliente">Clara & Felipe - Casamento 2024</p>
-            <blockquote>
-              "O trabalho da AngelBolos foi incrível! O bolo cenográfico que
-              criaram para o nosso casamento não só era lindo, mas também
-              refletia nossa personalidade e o estilo da festa. Foi muito mais
-              do que um bolo, foi uma verdadeira peça de decoração que fez toda
-              a diferença no nosso grande dia.”
-            </blockquote>
+    <main class="depoimentos-main">
+      <section class="depoimentos-hero">
+        <div class="container">
+          <h1 class="depoimentos-title">O que nossos clientes dizem</h1>
+          <p class="depoimentos-subtitle">
+            Histórias reais de momentos especiais que ajudamos a criar
+          </p>
+        </div>
+      </section>
+
+      <section class="depoimentos-stats">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Bolos Criados</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">98%</div>
+              <div class="stat-label">Clientes Satisfeitos</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">5★</div>
+              <div class="stat-label">Avaliação Média</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Anos de Experiência</div>
+            </div>
           </div>
-          <div class="depoimento">
-            <img
-              src="cliente2.jpg"
-              alt="Gabriela Almeida"
-              class="foto-cliente"
-            />
-            <p class="nome-cliente">Gabriela Almeida - Festa de 15 anos 2024</p>
-            <blockquote>
-              "O bolo para minha festa de 15 anos foi um verdadeiro show à
-              parte! A AngelBolos entendeu exatamente o que eu queria e fez um
-              bolo que se encaixou perfeitamente com o tema da festa. Ficou
-              maravilhoso e fez toda a diferença na decoração. Amei!"
-            </blockquote>
+        </div>
+      </section>
+
+      <section class="depoimentos-content">
+        <div class="container">
+          <div class="filter-tabs">
+            <button class="tab-btn active" data-filter="all">Todos</button>
+            <button class="tab-btn" data-filter="casamento">Casamentos</button>
+            <button class="tab-btn" data-filter="15anos">15 Anos</button>
+          </div>
+
+          <div class="depoimentos-grid" id="depoimentos-grid">
+            <div class="depoimento-card" data-category="casamento">
+              <div class="depoimento-header">
+                <div class="cliente-info">
+                  <div class="cliente-avatar">
+                    <span>C&F</span>
+                  </div>
+                  <div class="cliente-details">
+                    <h3 class="cliente-nome">Clara & Felipe</h3>
+                    <p class="cliente-evento">Casamento • Dezembro 2024</p>
+                  </div>
+                </div>
+                <div class="rating">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
+              </div>
+              <blockquote class="depoimento-texto">
+                "O trabalho da AngelBolos foi incrível! O bolo cenográfico que
+                criaram para o nosso casamento não só era lindo, mas também
+                refletia nossa personalidade e o estilo da festa. Foi muito mais
+                do que um bolo, foi uma verdadeira peça de decoração que fez
+                toda a diferença no nosso grande dia."
+              </blockquote>
+            </div>
+
+            <div class="depoimento-card" data-category="15anos">
+              <div class="depoimento-header">
+                <div class="cliente-info">
+                  <div class="cliente-avatar">
+                    <span>GA</span>
+                  </div>
+                  <div class="cliente-details">
+                    <h3 class="cliente-nome">Gabriela Almeida</h3>
+                    <p class="cliente-evento">
+                      Festa de 15 Anos • Novembro 2024
+                    </p>
+                  </div>
+                </div>
+                <div class="rating">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
+              </div>
+              <blockquote class="depoimento-texto">
+                "O bolo para minha festa de 15 anos foi um verdadeiro show à
+                parte! A AngelBolos entendeu exatamente o que eu queria e fez um
+                bolo que se encaixou perfeitamente com o tema da festa. Ficou
+                maravilhoso e fez toda a diferença na decoração. Amei!"
+              </blockquote>
+            </div>
+          <div class="load-more-container">
+            <button class="load-more-btn" onclick="loadMoreTestimonials()">
+              Ver Mais Deposmentos
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="depoimentos-cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Quer fazer parte dessas histórias?</h2>
+            <p>
+              Entre em contato conosco e vamos criar juntos o bolo cenográfico
+              perfeito para o seu evento especial.
+            </p>
+            <a
+              href="https://wa.me/5544991431604?text=Olá! Gostaria de solicitar um orçamento para um bolo cenográfico."
+              target="_blank"
+              class="cta-button"
+              onclick="trackWhatsAppClick('depoimentos-page')"
+            >
+              Solicitar Orçamento
+            </a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Angel Bolos. Todos os direitos reservados.</p>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AngelBolos</h3>
+            <p>
+              Transformando momentos especiais em lembranças inesquecíveis desde
+              2020.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="casamento.html">Casamentos</a></li>
+              <li><a href="depoimentos.html">Depoimentos</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <p>📍 Maringá - PR</p>
+            <p>📱 (44) 99143-1604</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 AngelBolos. Todos os direitos reservados.</p>
+        </div>
+      </div>
     </footer>
 
-    <div class="whatsapp-icon">
-      <img src="whatsapp-icon.png" alt="WhatsApp" />
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-float">
+      <a
+        href="https://wa.me/5544991431604?text=Olá! Gostaria de saber mais sobre os bolos cenográficos da AngelBolos."
+        target="_blank"
+        class="whatsapp-button"
+        onclick="trackWhatsAppClick('float-depoimentos')"
+      >
+        <img src="assets/images/10000484.png" alt="Falar no WhatsApp" />
+        <span class="whatsapp-tooltip">Fale conosco!</span>
+      </a>
     </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+      ↑
+    </button>
+
+    <script src="script.js"></script>
   </body>
 </html>

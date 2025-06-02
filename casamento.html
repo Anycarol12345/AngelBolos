@@ -3,90 +3,224 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Casamento - AngelBolos</title>
+    <title>Bolos de Casamento - AngelBolos</title>
+    <meta
+      name="description"
+      content="Bolos cenográficos únicos para casamentos. Designs elegantes e personalizados que tornam seu grande dia ainda mais especial."
+    />
     <link rel="stylesheet" href="styles.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Forum:wght@400&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <nav class="nav">
-        <ul class="menu">
-          <li><a href="maispedidos.html">Mais pedidos</a></li>
-          <li class="dropdown">
-            <a href="categoria.html">Categorias <span>&#9660;</span></a>
-            <ul class="dropdown-content">
-              <li><a href="casamento.html">Casamento</a></li>
-              <li><a href="#">Aniversários 15 anos</a></li>
-            </ul>
-          </li>
-          <li class="logo-item">
+        <div class="nav-container">
+          <div class="nav-menu" id="nav-menu">
+            <a href="maispedidos.html" class="nav-link">Mais Pedidos</a>
+            <div class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle active">
+                Categorias
+                <span class="dropdown-arrow">▼</span>
+              </a>
+              <div class="dropdown-content">
+                <a href="casamento.html">Casamentos</a>
+                <a href="15anos.html">Aniversários 15 Anos</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="logo-container">
             <a href="index.html">
               <img
                 src="assets/images/Rectangle 9.png"
-                alt="Logo da AngelBolos"
+                alt="AngelBolos - Logo"
                 class="logo"
               />
             </a>
-          </li>
-          <li><a href="sobre.html">Quem somos?</a></li>
-          <li><a href="depoimentos.html">Depoimentos</a></li>
-        </ul>
+          </div>
+
+          <div class="nav-menu">
+            <a href="sobre.html" class="nav-link">Quem Somos</a>
+            <a href="depoimentos.html" class="nav-link">Depoimentos</a>
+          </div>
+
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </nav>
     </header>
 
-    <main>
-      <section class="casamento">
-        <h1 class="section-title">Inspire-se com nossos bolos cenográficos</h1>
-        <p class="section-description">
-          Explore os modelos já criados para casamentos dos sonhos — do clássico
-          ao moderno. Cada bolo é feito com atenção aos detalhes, garantindo que
-          seja uma peça central inesquecível para o seu grande dia.
-        </p>
-        <p class="section-description">
-          Nossos bolos cenográficos são projetados para refletir a personalidade
-          e o estilo único de cada casal. Seja um casamento ao ar livre, em um
-          salão luxuoso ou em um ambiente mais intimista, temos opções que se
-          adaptam perfeitamente ao tema e à decoração do evento.
-        </p>
-        <p class="section-description">
-          Além disso, trabalhamos com uma ampla variedade de designs, desde
-          bolos minimalistas e elegantes até criações mais elaboradas e
-          ornamentadas. Cada peça é cuidadosamente confeccionada para
-          impressionar os convidados e criar memórias inesquecíveis.
-        </p>
-        <p class="section-description">
-          Permita que nossos bolos cenográficos sejam o destaque da sua
-          celebração. Entre em contato conosco para personalizar o bolo dos seus
-          sonhos e tornar o seu casamento ainda mais especial.
-        </p>
-        <div class="bolos-galeria">
-          <img
-            src="assets/images/WhatsApp Image 2025-05-20 at 19.49.53 (1).jpeg"
-            alt="Bolo de casamento 1"
-          />
-          <img src="assets/images/bolo2.jpg" alt="Bolo de casamento 2" />
-          <img src="assets/images/bolo3.jpg" alt="Bolo de casamento 3" />
-          <img src="assets/images/bolo4.jpg" alt="Bolo de casamento 4" />
+    <main class="casamento-main">
+      <section class="casamento-hero">
+        <div class="container">
+          <h1 class="casamento-title">Bolos Cenográficos para Casamentos</h1>
+          <p class="casamento-subtitle">
+            Inspire-se com nossos designs únicos e transforme seu grande dia em
+            algo verdadeiramente inesquecível
+          </p>
+        </div>
+      </section>
+
+      <section class="casamento-intro">
+        <div class="container">
+          <div class="intro-content">
+            <h2>Seu Casamento dos Sonhos</h2>
+            <p>
+              Explore os modelos já criados para casamentos dos sonhos — do
+              clássico ao moderno. Cada bolo é feito com atenção aos detalhes,
+              garantindo que seja uma peça central inesquecível para o seu
+              grande dia.
+            </p>
+
+            <p>
+              Nossos bolos cenográficos são projetados para refletir a
+              personalidade e o estilo único de cada casal. Seja um casamento ao
+              ar livre, em um salão luxuoso ou em um ambiente mais intimista,
+              temos opções que se adaptam perfeitamente ao tema e à decoração do
+              evento.
+            </p>
+
+            <p>
+              Além disso, trabalhamos com uma ampla variedade de designs, desde
+              bolos minimalistas e elegantes até criações mais elaboradas e
+              ornamentadas. Cada peça é cuidadosamente confeccionada para
+              impressionar os convidados e criar memórias inesquecíveis.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="casamento-galeria">
+        <div class="container">
+          <h2 class="section-title">Nossa Galeria de Casamentos</h2>
+          <div class="galeria-grid" id="casamento-galeria">
+            <div class="galeria-item">
+              <img
+                src="assets/images/WhatsApp Image 2025-05-20 at 19.49.53 (1).jpeg"
+                alt="Bolo de casamento elegante com flores delicadas"
+                loading="lazy"
+              />
+              <div class="galeria-overlay">
+                <h3>Elegância Clássica</h3>
+                <p>Flores delicadas e design atemporal</p>
+              </div>
+            </div>
+
+            <div class="galeria-item">
+              <img
+                src="assets/images/WhatsApp Image 2025-05-20 at 19.49.53 (4).jpeg"
+                alt="Bolo de casamento romântico com detalhes florais"
+                loading="lazy"
+              />
+              <div class="galeria-overlay">
+                <h3>Romance Floral</h3>
+                <p>Delicadeza em cada detalhe</p>
+              </div>
+            </div>
+
+            <div class="galeria-item">
+              <img
+                src="assets/images/WhatsApp Image 2025-05-20 at 19.49.53 (7).jpeg"
+                alt="Bolo de casamento minimalista"
+                loading="lazy"
+              />
+              <div class="galeria-overlay">
+                <h3>Minimalismo Chic</h3>
+                <p>Simplicidade sofisticada</p>
+                <button class="view-details" onclick="openModal('casamento6')">
+                  Ver Detalhes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="casamento-cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Pronto para criar o bolo dos seus sonhos?</h2>
+            <p>
+              Entre em contato conosco e vamos transformar sua visão em
+              realidade. Cada bolo é único, assim como o seu amor.
+            </p>
+            <a
+              href="https://wa.me/5544991431604?text=Olá! Gostaria de solicitar um orçamento para um bolo de casamento."
+              target="_blank"
+              class="cta-button"
+              onclick="trackWhatsAppClick('casamento-page')"
+            >
+              Solicitar Orçamento
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
-    <div class="whatsapp-icon">
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AngelBolos</h3>
+            <p>
+              Transformando momentos especiais em lembranças inesquecíveis desde
+              2020.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="casamento.html">Casamentos</a></li>
+              <li><a href="depoimentos.html">Depoimentos</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <p>📍 Maringá - PR</p>
+            <p>📱 (44) 99143-1604</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 AngelBolos. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal para detalhes dos bolos -->
+    <div class="modal" id="bolo-modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div class="modal-body" id="modal-body">
+          <!-- Conteúdo será inserido dinamicamente -->
+        </div>
+      </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-float">
       <a
-        href="https://wa.me/5544991431604"
+        href="https://wa.me/5544991431604?text=Olá! Gostaria de saber mais sobre os bolos de casamento da AngelBolos."
         target="_blank"
-        id="whatsappLink"
-        onclick="confirmWhatsApp(event)"
+        class="whatsapp-button"
+        onclick="trackWhatsAppClick('float-casamento')"
       >
-        <img src="assets/images/10000484.png" alt="WhatsApp" />
+        <img src="assets/images/10000484.png" alt="Falar no WhatsApp" />
+        <span class="whatsapp-tooltip">Fale conosco!</span>
       </a>
     </div>
 
-    <!-- Botão de rolagem para o topo -->
-    <button id="scrollToTop" class="scroll-to-top">↑</button>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+      ↑
+    </button>
 
     <script src="script.js"></script>
   </body>
