@@ -1478,7 +1478,7 @@ body {
 }
 
 .quinze-anos-hero {
-  background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+  background: linear-gradient(135deg, #4e6e5d);
   color: var(--white);
   padding: 80px 0;
   text-align: center;
@@ -1677,7 +1677,7 @@ body {
 
 .quinze-anos-cta {
   padding: 80px 0;
-  background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+  background: linear-gradient(135deg, #4e6e5d);
   color: var(--white);
   text-align: center;
 }
@@ -2108,5 +2108,24 @@ body {
 
   .story-text h2 {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu.show-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* ajuste conforme seu header */
+    left: 0;
+    width: 100%;
+    background: var(--primary-color);
+    box-shadow: var(--shadow);
+    z-index: 999;
+    gap: 0;
+  }
+  .nav-menu.show-mobile .nav-link {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
   }
 }
