@@ -656,92 +656,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .nav-container {
-    padding: 0 20px;
-    height: 80px;
-  }
-
-  .nav-menu {
-    display: none;
-  }
-
-  .mobile-menu-toggle {
-    display: flex;
-  }
-
-  .logo {
-    width: 60px;
-    height: 60px;
-  }
-
-  .hero {
-    padding: 120px 0 60px;
-  }
-
-  .about-preview .container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .bolos-galeria {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-
-  .filter-buttons {
-    gap: 10px;
-  }
-
-  .filter-btn {
-    padding: 8px 20px;
-    font-size: 14px;
-  }
-
-  .whatsapp-float {
-    bottom: 20px;
-    right: 20px;
-  }
-
-  .whatsapp-button {
-    width: 50px;
-    height: 50px;
-  }
-
-  .whatsapp-button img {
-    width: 28px;
-    height: 28px;
-  }
-
-  .scroll-to-top {
-    bottom: 20px;
-    left: 20px;
-    width: 45px;
-    height: 45px;
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 15px;
-  }
-
-  .hero-content {
-    padding: 0 15px;
-  }
-
-  .modal-content {
-    width: 95%;
-    margin: 10% auto;
-  }
-
-  .modal-body {
-    padding: 20px;
-  }
-}
-
 /* Utility Classes */
 .hidden {
   display: none !important;
@@ -1111,63 +1025,6 @@ body {
   color: var(--secondary-color);
 }
 
-@media (max-width: 768px) {
-  .produtos-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .filtros-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .filter-buttons {
-    gap: 8px;
-  }
-
-  .filter-btn,
-  .style-btn {
-    padding: 6px 15px;
-    font-size: 13px;
-  }
-
-  .produto-info {
-    padding: 20px;
-  }
-
-  .ordenacao-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .cta-button {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
-@media (max-width: 480px) {
-  .produto-card {
-    margin: 0 10px;
-  }
-
-  .produto-overlay {
-    padding: 20px;
-  }
-
-  .view-details,
-  .quick-quote {
-    padding: 8px 16px;
-    font-size: 13px;
-  }
-}
-
 /* Animações para filtros */
 .produto-card.hidden {
   opacity: 0;
@@ -1414,65 +1271,6 @@ body {
   opacity: 0.9;
 }
 
-@media (max-width: 768px) {
-  .depoimentos-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .depoimento-card {
-    padding: 20px;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .stat-number {
-    font-size: 2.5rem;
-  }
-
-  .filter-tabs {
-    gap: 10px;
-  }
-
-  .tab-btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  .depoimento-header {
-    flex-direction: column;
-    gap: 15px;
-    align-items: flex-start;
-  }
-
-  .cliente-info {
-    width: 100%;
-  }
-
-  .rating {
-    align-self: flex-end;
-  }
-}
-
-@media (max-width: 480px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cliente-avatar {
-    width: 50px;
-    height: 50px;
-    font-size: 16px;
-  }
-
-  .depoimento-texto {
-    padding-left: 15px;
-  }
-}
-
 .quinze-anos-main {
   padding-top: 100px;
 }
@@ -1694,35 +1492,6 @@ body {
   opacity: 0.9;
 }
 
-@media (max-width: 768px) {
-  .galeria-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .galeria-item {
-    height: 300px;
-  }
-
-  .temas-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .processo-timeline {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .quinze-anos-title {
-    font-size: 2.5rem;
-  }
-
-  .intro-content h2 {
-    font-size: 2rem;
-  }
-}
-
 .casamento-main {
   padding-top: 100px;
 }
@@ -1897,30 +1666,6 @@ body {
   opacity: 0.9;
 }
 
-@media (max-width: 768px) {
-  .galeria-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .galeria-item {
-    height: 300px;
-  }
-
-  .estilos-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .casamento-title {
-    font-size: 2.5rem;
-  }
-
-  .intro-content h2 {
-    font-size: 2rem;
-  }
-}
-
 .about-main {
   padding-top: 100px;
 }
@@ -2082,7 +1827,50 @@ body {
   opacity: 0.9;
 }
 
+/* Media Queries Consolidados */
 @media (max-width: 768px) {
+  /* Estilos gerais para tablets e dispositivos menores */
+  .nav-container {
+    padding: 0 20px;
+    height: 80px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.show-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: var(--primary-color);
+    box-shadow: var(--shadow);
+    z-index: 999;
+    gap: 0;
+  }
+
+  .nav-menu.show-mobile .nav-link {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hero {
+    padding: 120px 0 60px;
+  }
+
+  .about-preview .container,
   .story-content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -2092,40 +1880,175 @@ body {
     order: -1;
   }
 
-  .values-grid {
+  .bolos-galeria,
+  .produtos-grid,
+  .depoimentos-grid,
+  .galeria-grid,
+  .temas-grid,
+  .estilos-grid,
+  .values-grid,
+  .process-steps,
+  .processo-timeline {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .process-steps {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .galeria-item {
+    height: 300px;
   }
 
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .filter-buttons,
+  .filter-tabs {
+    gap: 10px;
+  }
+
+  .filter-btn,
+  .style-btn,
+  .tab-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .depoimento-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .cliente-info {
+    width: 100%;
+  }
+
+  .rating {
+    align-self: flex-end;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Títulos responsivos */
+  .hero-title,
+  .mais-pedidos-title,
+  .depoimentos-title,
+  .quinze-anos-title,
+  .casamento-title,
   .about-hero-title {
     font-size: 2.5rem;
   }
 
+  .intro-content h2,
   .story-text h2 {
     font-size: 2rem;
   }
+
+  .produto-info {
+    padding: 20px;
+  }
+
+  .ordenacao-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-button img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .scroll-to-top {
+    bottom: 20px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .depoimento-card {
+    padding: 20px;
+  }
+
+  .filtros-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
 }
 
-@media (max-width: 768px) {
-  .nav-menu.show-mobile {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 80px; /* ajuste conforme seu header */
-    left: 0;
-    width: 100%;
-    background: var(--primary-color);
-    box-shadow: var(--shadow);
-    z-index: 999;
-    gap: 0;
+@media (max-width: 480px) {
+  /* Estilos específicos para mobile pequeno */
+  .container {
+    padding: 0 15px;
   }
-  .nav-menu.show-mobile .nav-link {
+
+  .hero-content {
+    padding: 0 15px;
+  }
+
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+  }
+
+  .produto-card {
+    margin: 0 10px;
+  }
+
+  .produto-overlay {
     padding: 20px;
-    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .view-details,
+  .quick-quote {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cliente-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .depoimento-texto {
+    padding-left: 15px;
+  }
+
+  .filter-btn,
+  .style-btn {
+    padding: 6px 15px;
+    font-size: 13px;
   }
 }
