@@ -1,5 +1,5 @@
 const CONFIG = {
-  whatsappNumber: "5544991431604",
+  whatsappNumber: "554499380249",
   scrollOffset: 200,
   animationDuration: 300,
 };
@@ -678,7 +678,7 @@ function openModal(boloId) {
                 </ul>
             </div>
             <div class="modal-actions">
-                <a href="https://wa.me/5544991431604?text=Olá! Gostaria de saber mais sobre o bolo '${
+                <a href="https://wa.me/554499380249?text=Olá! Gostaria de saber mais sobre o bolo '${
                   boloData.title
                 }' para festa de 15 anos" 
                    target="_blank" 
