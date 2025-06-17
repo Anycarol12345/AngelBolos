@@ -525,18 +525,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function loadMoreTestimonials() {
-  // Simular carregamento de mais depoimentos
-  const button = document.querySelector(".load-more-btn");
-  button.textContent = "Carregando...";
-  button.disabled = true;
-
-  setTimeout(() => {
-    button.textContent = "Todos os depoimentos carregados";
-    button.style.opacity = "0.6";
-  }, 1500);
-}
-
 // Filtro de depoimentos
 document.addEventListener("DOMContentLoaded", function () {
   const tabBtns = document.querySelectorAll(".tab-btn");
@@ -573,79 +561,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function loadMoreTestimonials() {
-  // Simular carregamento de mais depoimentos
-  const button = document.querySelector(".load-more-btn");
-  button.textContent = "Carregando...";
-  button.disabled = true;
-
-  setTimeout(() => {
-    button.textContent = "Todos os depoimentos carregados";
-    button.style.opacity = "0.6";
-  }, 1500);
-}
-
 // Dados específicos para bolos de 15 anos
 const quinzeAnosData = {
   quinze1: {
-    title: "Princesa dos Sonhos",
-    image: "assets/images/WhatsApp Image 2025-05-30 at 08.59.55.jpeg",
-    description:
-      "Um bolo cenográfico que realiza o sonho de toda debutante. Design elegante e romântico com detalhes que encantam e impressionam todos os convidados.",
-    features: [
-      "Design princesa",
-      "Cores suaves e delicadas",
-      "Detalhes em dourado",
-      "Flores artesanais",
-      "Perfeito para fotos",
-    ],
-    category: "15 Anos",
-    style: "Romântico",
-  },
-  quinze2: {
-    title: "Juventude Moderna",
-    image: "assets/images/WhatsApp Image 2025-05-20 at 19.49.53 (8).jpeg",
-    description:
-      "Para debutantes que preferem um estilo mais contemporâneo e jovem. Design moderno que reflete a personalidade atual das jovens.",
-    features: [
-      "Design contemporâneo",
-      "Cores vibrantes",
-      "Estilo jovem",
-      "Detalhes modernos",
-      "Tendência atual",
-    ],
-    category: "15 Anos",
-    style: "Moderno",
-  },
-  quinze3: {
     title: "Jardim Encantado",
     image: "assets/images/WhatsApp Image 2025-05-20 at 19.49.53 (3).jpeg",
     description:
       "Inspirado na natureza, este bolo traz a delicadeza das flores e a magia de um jardim secreto para a festa da debutante.",
-    features: [
-      "Tema floral",
-      "Cores naturais",
-      "Flores delicadas",
-      "Estilo romântico",
-      "Inspiração natural",
-    ],
-    category: "15 Anos",
-    style: "Natural",
   },
-  quinze4: {
-    title: "Luxo Real",
-    image: "assets/images/WhatsApp Image 2025-05-20 at 19.49.53 (7).jpeg",
+  quinze2: {
+    title: "Sonho Lilás",
+    image: "assets/images/62841594-f7ad-4f82-ae71-4669c36bf1e1-thumbnail.webp",
     description:
-      "Para debutantes que sonham com uma festa luxuosa e sofisticada. Um bolo que transmite elegância e requinte em cada detalhe.",
-    features: [
-      "Design luxuoso",
-      "Acabamento premium",
-      "Detalhes sofisticados",
-      "Estilo real",
-      "Máxima elegância",
-    ],
-    category: "15 Anos",
-    style: "Luxo",
+      "É ideal para festas de 15 anos que buscam um ar de romantismo e leveza, mas com um toque de luxo.",
   },
 };
 
@@ -700,12 +628,12 @@ function openModal(boloId) {
   addModalStyles();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  const toggle = document.querySelector('.mobile-menu-toggle');
-  const menu = document.querySelector('.nav-menu');
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".mobile-menu-toggle");
+  const menu = document.querySelector(".nav-menu");
   if (toggle && menu) {
-    toggle.addEventListener('click', function() {
-      menu.classList.toggle('show-mobile');
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("show-mobile");
     });
   }
 });
